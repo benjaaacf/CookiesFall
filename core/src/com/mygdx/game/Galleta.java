@@ -10,7 +10,7 @@ public class Galleta extends ElementoCayendo {
     @Override
     public void efecto(Monstruo monstruo) {
         monstruo.sumarPuntos(1);
-        monstruo.sumarPuntos(1);
+        
     }
 }
 
