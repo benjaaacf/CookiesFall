@@ -13,6 +13,7 @@ public class Monstruo {
 	   private Rectangle monster;
 	   private Texture monsterImage;
 	   private Sound sonidoHerido;
+           private Sound sonidoComer;
 	   private int vidas = 3;
 	   private int puntos = 0;
 	   private int velx = 400;
@@ -21,9 +22,10 @@ public class Monstruo {
 	   private int tiempoHerido;
 	   
 	   
-	   public Monstruo(Texture tex, Sound ss) {
+	   public Monstruo(Texture tex, Sound ss, Sound sc) {
 		   monsterImage = tex;
 		   sonidoHerido = ss;
+                   sonidoComer = sc;
 	   }
 	   
 		public int getVidas() {
@@ -38,6 +40,7 @@ public class Monstruo {
 		}
 		public void sumarPuntos(int pp) {
 			puntos+=pp;
+                        sonidoComer.play();
 		}
 		
 	
