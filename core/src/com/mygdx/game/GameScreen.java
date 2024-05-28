@@ -33,7 +33,7 @@ public class GameScreen implements Screen {
             
             // load the images for the droplet and the bucket, 64x64 pixels each 
             Sound hurtSound = Gdx.audio.newSound(Gdx.files.internal("sonidoVomito.mp3"));
-            Sound eatSound = Gdx.audio.newSound(Gdx.files.internal("sonidoNam.mp3"));
+            Sound eatSound = Gdx.audio.newSound(Gdx.files.internal("comiendo2.mp3"));
             monstruo = new Monstruo(new Texture(Gdx.files.internal("monstruo.png")),hurtSound, eatSound);
          
             // load the drop sound effect and the rain background "music" 
