@@ -29,7 +29,7 @@ public class GameScreen implements Screen {
             this.font = game.getFont();
              
             // Cargar la textura de fondo
-            backgroundTexture = new Texture(Gdx.files.internal("fondo.jpg")); 
+            backgroundTexture = new Texture(Gdx.files.internal("perso7.png")); 
             
             // load the images for the droplet and the bucket, 64x64 pixels each 
             Sound hurtSound = Gdx.audio.newSound(Gdx.files.internal("sonidoVomito.mp3"));
@@ -42,7 +42,7 @@ public class GameScreen implements Screen {
 
             Sound dropSound = Gdx.audio.newSound(Gdx.files.internal("drop.wav"));
         
-	    Music musicaFondo = Gdx.audio.newMusic(Gdx.files.internal("musicaFondo.mp3"));
+	    Music musicaFondo = Gdx.audio.newMusic(Gdx.files.internal("musicaFondoGood.mp3"));
             caida = new Caida(gota, vegetal, dropSound, musicaFondo);
 
             // camara
