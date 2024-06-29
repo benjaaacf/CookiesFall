@@ -19,13 +19,13 @@ public class MainMenuScreen implements Screen {
 		this.game = game;
         this.batch = game.getBatch();
         this.font = game.getFont();
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, 800, 480);
+            camera = new OrthographicCamera();
+            camera.setToOrtho(false, 800, 480);
 	}
 
 	@Override
 	public void render(float delta) {
-		ScreenUtils.clear(0, 0, 0.2f, 1);
+		ScreenUtils.clear(182f / 255, 238f / 255, 244f / 255, 1);
 
 		camera.update();
 		batch.setProjectionMatrix(camera.combined);

@@ -34,16 +34,18 @@ public class GameScreen implements Screen {
             // load the images for the droplet and the bucket, 64x64 pixels each 
             Sound hurtSound = Gdx.audio.newSound(Gdx.files.internal("sonidoVomito.mp3"));
             Sound eatSound = Gdx.audio.newSound(Gdx.files.internal("comiendo2.mp3"));
-            monstruo = new Monstruo(new Texture(Gdx.files.internal("monstruo.png")),hurtSound, eatSound);
+            Sound goldCookieSound = Gdx.audio.newSound(Gdx.files.internal("coin.mp3")); // Nuevo sonido
+            
+            monstruo = new Monstruo(new Texture(Gdx.files.internal("monstruo.png")),hurtSound, eatSound, goldCookieSound);
          
             // load the drop sound effect and the rain background "music" 
             Texture gota = new Texture(Gdx.files.internal("cookie.png"));
             Texture vegetal = new Texture(Gdx.files.internal("vegetal.png"));
-
-            Sound dropSound = Gdx.audio.newSound(Gdx.files.internal("drop.wav"));
+            Texture galletaDorada = new Texture (Gdx.files.internal("goldcookie.png"));
+            
         
 	    Music musicaFondo = Gdx.audio.newMusic(Gdx.files.internal("musicaFondoGood.mp3"));
-            caida = new Caida(gota, vegetal, dropSound, musicaFondo);
+            caida = new Caida(gota,galletaDorada, vegetal, musicaFondo);
 
             // camara
             camera = new OrthographicCamera();
@@ -93,7 +95,7 @@ public class GameScreen implements Screen {
 
             // Dibujar el monstruo y los objetos
             monstruo.dibujar(batch);
-            caida.actualizarDibujoLluvia(batch);
+            caida.render(batch);
 
             // Terminar el batch
             batch.end();

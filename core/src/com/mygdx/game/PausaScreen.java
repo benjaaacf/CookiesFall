@@ -27,7 +27,7 @@ public class PausaScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		ScreenUtils.clear(0, 0, 1.0f, 0.5f);
+		ScreenUtils.clear(210f / 255, 182f / 255, 244f / 255, 1);
 
 		camera.update();
 		batch.setProjectionMatrix(camera.combined);
